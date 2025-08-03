@@ -1,0 +1,18 @@
+.subject-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.subject-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.subject-card:hover {
+  background-color: #f0f8ff;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
