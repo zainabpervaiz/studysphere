@@ -1,0 +1,120 @@
+
+
+.home-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f9fafb; /* ہلکا greyish-white background */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 25px;
+  width: 50%;
+  margin: 0 auto 20px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search-bar i {
+  color: #a0a0a0;
+  font-size: 16px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Sections */
+.questions-section,
+.subjects-section,
+.news-section,
+.map-section {
+  margin-bottom: 30px;
+}
+
+.questions-section h2,
+.subjects-section h2,
+.news-section h2,
+.map-section h2 {
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Questions List */
+.questions-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.questions-section li {
+  background: #e6f0fa; /* soft blue */
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.questions-section li:hover {
+  transform: translateY(-2px);
+  background: #cfe4f7; /* تھوڑا dark hover */
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.subject-card {
+  background: #ffe7ba; /* soft pastel orange */
+  color: #333;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.subject-card i {
+  font-size: 18px;
+}
+
+.subject-card:hover {
+  transform: translateY(-3px);
+  background: #ffd591; /* hover pastel orange */
+}
+
+/* News Section */
+.news-item {
+  background: #fffbe6; /* soft yellow */
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #ffecb3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f0f0; /* light grey */
+  color: #555;
+}
