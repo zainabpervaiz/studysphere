@@ -58,10 +58,7 @@ function Home() {
           <p>We have introduced new features for students to connect better.</p>
         </div>
       </section>
-
-      
-      
-    </div> 
+    </div>
   );
 }
 

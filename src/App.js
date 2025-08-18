@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './pages/Login';
@@ -9,6 +8,7 @@ import Subject from './pages/Subject';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
 import About from './pages/About';
+import { QuestionProvider } from "./QuestionContext"; // Context import
 
 // Subject Detail Imports
 import Mathmatics from './Details/Mathmatics';
@@ -23,10 +23,8 @@ import English from './Details/English';
 import { Search } from 'lucide-react';
 
 function App() {
-  const [submittedQuestions, setSubmittedQuestions] = useState([]); // ✅ shared state
-
   return (
-    <>
+    <QuestionProvider>   {/* Wrap the whole app with Context */}
       <Navbar />
 
       {/* Search bar outside Navbar */}
@@ -56,12 +54,9 @@ function App() {
       </div>
 
       <Routes>
-        {/* Main Pages with shared state */}
-        <Route path="/" element={<Home submittedQuestions={submittedQuestions} />} />
-        <Route 
-          path="/ask" 
-          element={<AskQuestion submittedQuestions={submittedQuestions} setSubmittedQuestions={setSubmittedQuestions} />} 
-        />
+        {/* Main Pages */}
+        <Route path="/" element={<Home />} />   
+        <Route path="/ask" element={<AskQuestion />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
@@ -82,7 +77,7 @@ function App() {
       <div style={{ marginBottom: '20px' }}>
         <Footer />
       </div>
-    </>
+    </QuestionProvider>
   );
 }
 
